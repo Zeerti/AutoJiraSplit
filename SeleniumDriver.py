@@ -107,10 +107,11 @@ class SeleniumDriver():
         sleep(.5) #Ensure it properly reloads
         severity_drop_down.click()
         severity_drop_down.send_keys("Minor", Keys.TAB)
-        sleep(.25)
+        sleep(.5)
 
         assigned_to_element = self.driver.find_element_by_xpath(
             ".//*[@id='assignee-field']")
+        assigned_to_element.clear()
         assigned_to_element.send_keys("Mike Dem")
         sleep(.5)
         assigned_to_element.send_keys(Keys.TAB, Keys.TAB)
@@ -118,6 +119,7 @@ class SeleniumDriver():
         submit_JIRA_case_button = self.driver.find_element_by_xpath('//*[@id="create-issue-submit"]')
         submit_JIRA_case_button.click()
 
+        sleep(.6)
         JIRA_case_number_element = self.driver.find_element_by_xpath('//*[@id="aui-flag-container"]/div/div')
         self.JIRA_case_raw = JIRA_case_number_element.get_attribute("innerHTML")
         self.last_created_JIRA_Case = self.getJIRACase(self.JIRA_case_raw)
