@@ -162,14 +162,4 @@ if(__name__ == "__main__"):
     main_GUI = JiraGeneratorWindow(root, _selenium)
     root.mainloop()
 
-    # <div class="aui-message aui-message-success"
-    # <a class="issue-created-key issue-link" data-issue
 
-    # CONTACTS
-    # [~gary_meyer@partech.com]
-    # [~garrett_breeden@partech.com]
-    # [~steven_eddy@partech.com]
-    # [~Derek_puttmann@partech.com]
-    # [~anglo_espineli@partech.com]
-    # [~chris_wright@partech.com]
-    # [~ryan_schneider@partech.com]
